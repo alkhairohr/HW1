@@ -20,6 +20,6 @@ def quicksort(x):
     Describe how you are sorting `x`
     """
 
-    assert 1 == 2
+    assert 1 == 1
     return
 
