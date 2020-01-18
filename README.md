@@ -1,8 +1,6 @@
 # example
 
-[![Build
-Status](https://travis-ci.org/ucsf-bmi-203-2017/example.svg?branch=master)](https://travis-ci.org/ucsf-bmi-203-2017/example)
-
+[![Build Status](https://travis-ci.org/alkhairohr/HW1.svg?branch=master)](https://travis-ci.org/alkhairohr/HW1)
 Example python project with testing.
 
 ## usage
