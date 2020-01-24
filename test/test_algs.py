@@ -69,5 +69,5 @@ def test_quicksort():
 
     #single valued array
     x = [1]
-    y = sorting.quick_sort(x,0,1)
+    y = sorting.quick_sort(x,0,0)
     assert y == x
