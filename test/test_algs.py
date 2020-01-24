@@ -1,21 +1,8 @@
 import numpy as np
-from example import algs
+from example import sorting
 
-def test_pointless_sort():
-    # generate random vector of length 10
-    x = np.random.rand(10)
-
-    # check that pointless_sort always returns [1,2,3]
-    assert np.array_equal(algs.pointless_sort(x), np.array([1,2,3]))
-
-    # generate a new random vector of length 10
-    x = np.random.rand(10)
-
-    # check that pointless_sort still returns [1,2,3]
-    assert np.array_equal(algs.pointless_sort(x), np.array([1,2,3]))
-
-def pract2():
-	assert 1==1
+so.COND = 0 
+so.COND = 0
 
 def test_bubblesort():
     # Actually test bubblesort here. It might be useful to think about
@@ -23,15 +10,64 @@ def test_bubblesort():
     # think about: (1) does your code handle 0-element arrays without
     # failing, (2) does your code handle characters?
 
-    x = np.array([1,2,4,0,1])
+    #odd # array, duplicate values
+    x = [1,2,4,0,1]
+    y = sorting.bubblesort(x)
+    assert [0,1,1,2,4] == y
+
+    #even # array
+    x = [1,2,4,0,1,7]
+    y = sorting.bubblesort(x)
+    assert [0,1,1,2,4,7] == y
+
+    #empty array
+    x = []
+    y = sorting.bubblesort(x)
+    assert [] == y
+
+    #single valued array
+    x = [1]
+    y = sorting.bubblesort(x)
+    assert x == y
     
     # for now, just attempt to call the bubblesort function, should
     # actually check output
-    algs.bubblesort(x)
+def test_insertion():
+
+    x = [1,2,4,0,1]
+    y = sorting.insertion_sort(x)
+    assert [0,1,1,2,4] == y
+
+    #even # array
+    x = [1,2,4,0,1,7]
+    y = sorting.insertion_sort(x)
+    assert [0,1,1,2,4,7] == y
+    #empty array
+    x = []
+    y = sorting.insertion_sort(x)
+    assert y == x
+
+    #single valued array
+    x = [1]
+    y = sorting.insertion_sort(x)
+    assert x == y 
 
 def test_quicksort():
 
-    x = np.array([1,2,4,0,1])
-    # for now, just attempt to call the quicksort function, should
-    # actually check output
-    algs.quicksort(x)
+    x = [1,2,4,0,1]
+    y = sorting.quick_sort(x)
+    assert y == [0,1,1,2,4]
+
+    #even # array
+    x = [1,2,4,0,1,7]
+    y = sorting.quick_sort(x)
+    assert y == [0,1,1,2,4,7]
+    #empty array
+    x = []
+    y = sorting.quick_sort(x)
+    assert x == y
+
+    #single valued array
+    x = [1]
+    y = sorting.quick_sort(x)
+    assert y == x
