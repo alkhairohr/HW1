@@ -12,22 +12,22 @@ def test_bubblesort():
 
     #odd # array, duplicate values
     x = [1,2,4,0,1]
-    y = sorting.bubblesort(x)
+    y = sorting.bubble_sort(x)
     assert [0,1,1,2,4] == y
 
     #even # array
     x = [1,2,4,0,1,7]
-    y = sorting.bubblesort(x)
+    y = sorting.bubble_sort(x)
     assert [0,1,1,2,4,7] == y
 
     #empty array
     x = []
-    y = sorting.bubblesort(x)
+    y = sorting.bubble_sort(x)
     assert [] == y
 
     #single valued array
     x = [1]
-    y = sorting.bubblesort(x)
+    y = sorting.bubble_sort(x)
     assert x == y
     
     # for now, just attempt to call the bubblesort function, should
