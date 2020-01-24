@@ -1,8 +1,8 @@
 import numpy as np
 from example import sorting
 
-so.COND = 0 
-so.COND = 0
+sorting.COND = 0 
+sorting.ASSIGN = 0
 
 def test_bubblesort():
     # Actually test bubblesort here. It might be useful to think about
