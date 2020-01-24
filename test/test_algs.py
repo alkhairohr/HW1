@@ -55,19 +55,19 @@ def test_insertion():
 def test_quicksort():
 
     x = [1,2,4,0,1]
-    y = sorting.quick_sort(x)
+    y = sorting.quick_sort(x,0,4)
     assert y == [0,1,1,2,4]
 
     #even # array
     x = [1,2,4,0,1,7]
-    y = sorting.quick_sort(x)
+    y = sorting.quick_sort(x,0,5)
     assert y == [0,1,1,2,4,7]
     #empty array
     x = []
-    y = sorting.quick_sort(x)
+    y = sorting.quick_sort(x,0,0)
     assert x == y
 
     #single valued array
     x = [1]
-    y = sorting.quick_sort(x)
+    y = sorting.quick_sort(x,0,1)
     assert y == x
